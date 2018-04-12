@@ -9,7 +9,7 @@ contract Election {
     }
 
     mapping(uint => Candidate) public candidates;
-    uint public candidateCounter;
+    uint public candidatesCount;
     
     function Election() public {
         addCandidate("Candidate1");
@@ -17,8 +17,8 @@ contract Election {
     }
 
     function addCandidate(string _name){
-        candidateCounter++;
-        candidates[candidateCounter] = Candidate(candidateCounter, _name, 0);
+        candidatesCount++;
+        candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
     }
 
 }
